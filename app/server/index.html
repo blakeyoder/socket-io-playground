@@ -1,0 +1,12 @@
+<script src="/socket.io/socket.io.js"></script>  
+<script>  
+    var socket = io.connect('/');
+    socket.on('announcements', function(data) {
+    	document.getElementById('connections').innerText = JSON.stringify(data, null, 2);
+
+    });
+</script> 
+
+<h1>
+	<pre>Welcome to the internet: <span id="connections"></span></pre>
+</h1>
